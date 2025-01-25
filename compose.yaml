@@ -1,0 +1,6 @@
+﻿services:
+  studentportal.web:
+    image: studentportal.web
+    build:
+      context: .
+      dockerfile: StudentPortal.Web/Dockerfile
