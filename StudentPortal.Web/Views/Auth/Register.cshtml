@@ -1,0 +1,31 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "_Layout";
+}
+
+<div class="container w-25 border border-1 rounded p-4">
+    <h2 class="mb-4">Register Page</h2>
+    <form method="post" asp-action="Register" asp-controller="Auth">
+        <div data-mdb-input-init class="form-outline mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" />
+        </div>
+
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+
+        <div class="text-start">
+            <p>Have an account? <a asp-controller="Auth" asp-action="Login">Login</a></p>
+        </div>
+    </form>
+    @if (ViewBag.Error != null)
+    {
+        <p class="text-danger">@ViewBag.Error</p>
+    }
+</div>

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentPortal.Web.Data;
@@ -40,6 +41,7 @@ public class StudentsController : Controller
         return RedirectToAction("List", "Students");
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> List()
     {
