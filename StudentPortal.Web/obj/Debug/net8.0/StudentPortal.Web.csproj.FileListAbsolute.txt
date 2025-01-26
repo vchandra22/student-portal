@@ -108,3 +108,4 @@
 /home/thinkpad/Documents/sandbox/dotnet/StudentPortal/StudentPortal.Web/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /home/thinkpad/Documents/sandbox/dotnet/StudentPortal/StudentPortal.Web/obj/Debug/net8.0/StudentPortal.Web.csproj.AssemblyReference.cache
 /home/thinkpad/Documents/sandbox/dotnet/StudentPortal/StudentPortal.Web/obj/Debug/net8.0/StudentPortal.Web.csproj.CopyComplete
+/home/thinkpad/Documents/sandbox/dotnet/StudentPortal/StudentPortal.Web/obj/Debug/net8.0/StudentPortal.Web.sourcelink.json

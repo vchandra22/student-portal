@@ -5,7 +5,7 @@ namespace StudentPortal.Web.Models.Entity;
 public class Users
 {
     [Key]
-    public int UserId { get; set; }
+    public Guid UserId { get; set; } = Guid.NewGuid();
     
     [Required]
     public string? Name { get; set; }
