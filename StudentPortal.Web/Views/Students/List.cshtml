@@ -5,7 +5,14 @@
 
 @model System.Collections.Generic.List<StudentPortal.Web.Models.Entity.Student>
 
-<h2>List Students</h2>
+<div class="d-flex justify-content-between">
+    <h2>List Students</h2>
+    <div>
+        <a class="btn btn-primary" asp-controller="Students" asp-action="Add">
+            Add Student
+        </a>
+    </div>
+</div>
 
 <table class="table table-bordered">
     <thead class="table-dark">

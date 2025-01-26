@@ -36,14 +36,16 @@ public class StudentsController : Controller
         await dbContext.Students.AddAsync(student);
         
         await dbContext.SaveChangesAsync();
-        
-        return View();
+
+        return RedirectToAction("List", "Students");
     }
 
     [HttpGet]
     public async Task<IActionResult> List()
     {
-        var students = await dbContext.Students.ToListAsync();
+        var students = await dbContext.Students
+            .OrderByDescending(s => s.CreatedAt)
+            .ToListAsync();
         
         return View(students);
     }
