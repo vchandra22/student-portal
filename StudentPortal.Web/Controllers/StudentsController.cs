@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StudentPortal.Web.Data;
 using StudentPortal.Web.Models;
 using StudentPortal.Web.Models.Entity;
@@ -37,5 +38,13 @@ public class StudentsController : Controller
         await dbContext.SaveChangesAsync();
         
         return View();
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> List()
+    {
+        var students = await dbContext.Students.ToListAsync();
+        
+        return View(students);
     }
 }

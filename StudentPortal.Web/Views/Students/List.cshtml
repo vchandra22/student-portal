@@ -1,0 +1,36 @@
+@{
+    ViewBag.Title = "List Students";
+    Layout = "_Layout";
+}
+
+@model System.Collections.Generic.List<StudentPortal.Web.Models.Entity.Student>
+
+<h2>List Students</h2>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th> </th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Phone</td>
+                <td>
+                    <a>
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
