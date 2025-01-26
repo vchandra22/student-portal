@@ -8,7 +8,7 @@
 <h2>List Students</h2>
 
 <table class="table table-bordered">
-    <thead>
+    <thead class="table-dark">
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -25,10 +25,16 @@
                 <td>@student.Name</td>
                 <td>@student.Email</td>
                 <td>@student.Phone</td>
-                <td>
-                    <a>
+                <td class="d-flex justify-content-center">
+                    <a class="btn btn-primary me-3" asp-controller="Students" asp-action="Edit" asp-route-id="@student.Id">
                         Edit
                     </a>
+                    <form asp-controller="Students" asp-action="Delete" asp-route-id="@student.Id" method="post">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </form>
                 </td>
             </tr>
         }
